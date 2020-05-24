@@ -30,7 +30,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("Ambient = "); Serial.print(mlx.readAmbientTempC()); 
+  Serial.print("Ambient = "); Serial.print(1000-mlx.readAmbientTempC()); 
   Serial.print("*C\tObject = "); Serial.print(mlx.readObjectTempC()); Serial.println("*C");
   Serial.print("Ambient = "); Serial.print(mlx.readAmbientTempF()); 
   Serial.print("*F\tObject = "); Serial.print(mlx.readObjectTempF()); Serial.println("*F");
