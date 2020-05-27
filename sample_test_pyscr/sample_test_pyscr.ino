@@ -6,7 +6,7 @@ Serial.begin(9600);
 
 void loop()
 {
-//send 'Hello, world!' over the serial port
+// send fake data through serial
 Serial.print("Raunak");
 Serial.print(",");
 Serial.print(78);
