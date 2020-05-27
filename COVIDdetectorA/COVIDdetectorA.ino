@@ -14,8 +14,9 @@ String * p_names = new String[4]; // create a new pointer array for names
 char *pins= new char[4]; // create a new pointer array for the pins or passcodes of the user
 
 // LCD intialization code
-const int rs = 13, en = 12, d4 = 11, d5 = 10, d6 = 9, d7 = 8; // define connected pins
-LiquidCrystal lcd(rs, en, d4, d5, d6, d7); // define them in function
+//const int rs = 13, en = 12, d4 = 11, d5 = 10, d6 = 9, d7 = 8; // define connected pins
+//LiquidCrystal lcd(rs, en, d4, d5, d6, d7); // define them in function
+LiquidCrystal lcd(13, 12, 11, 10, 9, 8);
 
 // keypad intialization code
 const byte ROWS = 3; // specify columns
@@ -70,8 +71,8 @@ void loop() {
         // check if any of the pins are equal to input
         if (pins[i] == p_arr[0]) {
           lcd.clear(); // clear lcd
-          lcd.print(p_names[i]); // print the name corrsponding to the specified pin
-          Serial.print(p_names[i]); // also print it in Serial
+          lcd.print(p_names[i]); // print the name corresponding to the specified pin
+          Serial.println(p_names[i]); // also print it in Serial
           delay(300); // delay
           break; // break out of loop
         }
